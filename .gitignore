@@ -41,3 +41,6 @@ _testmain.go
 #.sass-cache
 #builds/**/images/*
 #*.ogg
+
+#이미지폴더
+media/
