@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let attendance,seat;
+        attendance = parseInt(prompt("입장객은 몇 명인가요?","0"));
+        seat = parseInt(prompt("한 줄에 몇 명씩 앉습니까?","0"));
+
+        if(attendance % seat === 0) {
+            rowNum = parseInt(attendance/seat);
+        }
+        else {
+            rowNum = parseInt(attendance/seat)+1;
+        }
+        document.write("<table>");
+        for(let i=0; i<rowNum; i++) {
+            document.write("<tr>");
+            for(let j=1; j<=seat; j++) {
+                seatNo = i * seat + j;
+                if(seatNo > attendance) break;
+                document.write("<td> 좌석 " +seatNo+" </td>");
+            }
+            document.write("</tr>");
+        }
+        document.write("</table>");
+    </script>
+    <style>
+        table, td{
+            border:1px solid black;
+            border-collapse: collapse;
+        }
+        td{
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+    
+</body>
+</html>
