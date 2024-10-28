@@ -11,8 +11,8 @@
             //2. 금액입력이 1200원 미만이면 경고창을 리턴한다.
             let price = window.parseInt(priceObj.value);
             if(price < 1200){
-                window.alert(`$(price) 가격으로는 주문불가입니다.`);
-                //window.alert(price+"가격으로는 주문불가입니다.");
+                //window.alert(`$(price) 가격으로는 주문불가입니다.`);
+                window.alert(price+"가격으로는 주문불가입니다.");
                 return;
             }
             window.console.log("price",price);
@@ -28,10 +28,10 @@
             for(let i=0; i<count; i++) {
                 //랜덤수
                 let no = Math.floor(Math.random()*(3-1+1)+1);
-                document.write(`$(i+1)번음식: <img src="/media/food$(no).png" width="200px">`);
+                document.write((i+1)+`번음식: <img src="/media/food`+no+`.png" width="200px">`);
             }
             document.write("<hr>");
-            document.write(`<p>총액: $(total) 잔액: $(change) </p>`);
+            document.write("<p>총액: "+total+ "잔액: "+change+" </p>");
             //5. 총액과 잔액 계산해서 보여준다.
         }
     </script>
