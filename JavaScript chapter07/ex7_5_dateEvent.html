@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <form action="#" method="get">
+        <p>궁금한 날짜를 입력하세요</p>
+        <input type="number" name="year" id="year" size="10" maxlength="8"> <br>
+        <input type="number" name="month" id="month" size="10" maxlength="8"> <br>
+        <input type="number" name="day" id="day" size="10" maxlength="8"> <br>
+        <button type="button" onclick="caculateDate();">계산</button>
+    </form>
+    <p id="today"></p>
+    <p id="result"></p>
+
+    <script>
+        function caculateDate() {
+            const year = window.document.querySelector("#year").value;
+            const month = window.document.querySelector("#month").value;
+            const day = window.document.querySelector("#day").value;
+            const today = window.document.querySelector("#today");
+            const result = window.document.querySelector("#result");
+            today.textContent =`<b>`+(parseInt(year.value))+`</b>`;
+            result.innerHTML =`<b>`+(parseInt(year.value))+`</b>;`
+            //현재 날짜
+              const currentDay = new Date();
+              let numYear = parseInt(year);
+              let numDay = parseInt(day);
+              //사용자가 입력한 날짜
+             const userDay = new Date(numYear,numMonth,numDay);
+             today.textContent = currentDay.toLocaleString();
+             // 날짜 계산하기 사용자가 입력한 날짜 - 현재 날짜
+             const timeDifference = (usderDay - currentDay)/(1000*60*60*24);
+             console.log('timeDifference: ',timeDifference);
+             console.log('userDay: ',userDay);
+             console.log('currentDay: ',currentDay);
+             result.innerHTML = Math.fllor(timeDifference);
+        }
+    </script>
+</body>
+</html>
