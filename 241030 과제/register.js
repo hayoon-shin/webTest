@@ -1,6 +1,5 @@
 function carousel() {
     //화면객체 가져온다.
-    let slideshow = document.querySelector(".slideshow");
     let slideshow_slides = document.querySelector(".slideshow_slides");
     let slidesArray = document.querySelectorAll(".slideshow_slides a");
     let prev = document.querySelector(".prev");
@@ -11,13 +10,13 @@ function carousel() {
     let currentIndex = 0;
     let timerID = null;
     let slideCount = slidesArray.length;
-    // 현재 이미지를 한 줄로 정렬한다.
-    for(let i=0; i<slideCount; i++) {
+    //현재 이미지를 한 줄로 정렬한다.
+    for (let i=0; i<slideCount; i++) {
         let newLeft = (i*100)+`%`;
         slidesArray[i].style.left = newLeft;
     }
 
-    // 화면 전환해주는 함수
+    //화면 전환해주는 함수
     function gotoslide(index) {
         currentIndex = index;
         let newLeft = (index * -100)+`%`;
@@ -28,20 +27,19 @@ function carousel() {
             indicatorArray[i].classList.remove('active');
         }
         indicatorArray[index].classList.add('active');
-
     }//end of gotoslide
 
     gotoslide(1);
-    //3초마다 gotoslide() 불러주자. 불러주되, index 0,1,2,3,0,1,....식으로 불러주자
+    //3초마다 gotoslide() 불러주자. 불러주되, index 0,1,2,3,0,1,2......식으로 불러주자
     function startTimer() {
         timerID = setInterval(()=>{
             let index = (currentIndex + 1) % slideCount;
             currentIndex = index;
             gotoslide(index);
-        },3000);
+        }, 3000);
     }
     startTimer();
-    // 이벤트등록 핸들러기능
+    //이벤트등록 핸들러기능
     slideshow_slides.addEventListener("mouseenter",(event)=>{
         clearInterval(timerID);
     });
@@ -62,16 +60,16 @@ function carousel() {
     });
 
     prev.addEventListener("click",(event)=>{
-        event.preventDefault(); // anchor tag가 가지고 있는 페이지이동 기본기능을 막아라
-        currentIndex = currentIndex-1;
+        event.preventDefault(); //anchor tag가 가지고 있는 페이지이동 기본기능을 막아라.
+        currentIndex =currentIndex-1;
         if(currentIndex < 0) {
             currentIndex = slideCount -1;
         }
         gotoslide(currentIndex);
     });
     next.addEventListener("click",(event)=>{
-        event.preventDefault(); // anchor tag가 가지고 있는 페이지이동 기본기능을 막아라
-        currentIndex = currentIndex+1;
+        event.preventDefault(); //anchor tag가 가지고 있는 페이지이동 기본기능을 막아라.
+        currentIndex =currentIndex+1;
         if(currentIndex > (slideCount-1)) {
             currentIndex = 0;
         }
@@ -91,9 +89,8 @@ function carousel() {
     }
     for(let i=0; i<slideCount; i++) {
         indicatorArray[i].addEventListener("click",(event)=>{
-            event.preventDefault();
+            event.preventDefault;
             gotoslide(i);
         });
     }
 }//end of carousel
-
