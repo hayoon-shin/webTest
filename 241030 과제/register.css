@@ -1,0 +1,224 @@
+* {
+    box-sizing: border-box;
+    text-decoration: none;
+    margin: 0px;
+    padding: 0px;
+}
+header {
+    background-color: darkblue;
+    width: 1280px;
+    height: 100px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+i, a{
+    color: white;
+}
+.logo_set {
+    font-size: 50px;
+    padding-left: 25px;
+}
+.dropdown_list {
+    width: 500px;
+    list-style-type: none;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size:24px;
+    position: relative;
+}
+ul > li:hover > a {
+    background-color: orange;
+}
+div.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: orange;
+    min-width: 100px;
+    z-index: 1;
+    box-shadow: 0px 8px 6px -6px #666;
+}
+div.dropdown-content a {
+    display:block;
+    padding: 16px 16px;
+}
+div.dropdown-content a:hover {
+    background-color:black; 
+}
+.dropdown_list:hover .dropdown-content {
+    display: block;
+}
+.icon_set {
+    font-size: 28px;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-right: 25px;
+} 
+/* header 끝 */
+/* slideshow 시작 */
+img{
+    width: 1280px;
+}
+
+div.slideshow {
+    min-width: 1280px;
+    height:465px;
+    position: relative;
+}
+div.slideshow_slides {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+div.slideshow_slides a {
+    position:absolute;
+    width: 100%;
+    height: 80%;
+    display: inline-block;
+}
+div.slideshow_nav a {
+    position: absolute;
+    left: 50%;
+    top: 40%;
+    color: white;
+    transform: translateY(-50%);
+    font-size: 42px;
+    opacity: 0.5;
+}
+div.slideshow_nav a.prev {
+    margin-left: -462px;
+}
+div.slideshow_nav a.next {
+    margin-left: 400px;
+}
+ div.slideshow_indicator {
+    position: absolute;
+    top: 325px;
+    left:0;
+    right:0;
+    text-align:center;
+}
+div.slideshow_indicator a {
+    display: inline-block;
+    color: white;
+    padding: 7px;
+    font-size: 16px;
+    opacity: 0.6;
+ }
+ div.slideshow_indicator a.active i {
+    color: orangered!important;
+ }
+ /* slideshow 끝 */
+ /* Main 시작 */
+ .main_wrap {
+
+ }
+ div.title_main {
+    width: 640px;
+    height: 790px;
+    background-color: darkblue;
+    margin:0 auto;
+    position: absolute;
+    top:500px;
+    left:525px;
+}
+div.title_main div {
+    color: white;
+    text-align: center;
+    font-size: 24px;
+    padding:20px;
+}
+form {
+    background-color: whitesmoke;
+    width: 620px;
+    margin:0 auto;
+}
+label {
+    font-weight: 600;
+    line-height: 36px;
+}
+input {
+    width: 600px;
+    height: 30px;
+    position: relative;
+    left:10px;
+    border: none;
+}
+#id {
+    width:400px; 
+}
+#mail {
+    width:200px;
+    
+}
+select {
+    width: 600px;
+    height: 30px;
+    position: relative;
+    left:10px;
+    border: none;
+}
+#year, #month, #day {
+    width:190px;
+    margin-right: 10px;
+}
+#phone2 {
+    width: 400px;
+    margin: 10px 0px;
+}
+#confirmnumber {
+    width: 200px;
+    height: 30px;
+    margin-left: 10px;
+    border:none;
+    background-color: orange;
+    color:white;
+}
+#join {
+    width: 600px;
+    height: 30px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    border:none;
+    background-color: orange;
+    color:white;
+    
+}
+nav {
+    width: 300px;
+    height: 790px;
+    background-color: darkblue;
+    position:absolute;
+    top:500px;
+    left:200px;
+    color: white;
+    text-align: center;
+    font-size: xx-large;
+}
+aside {
+    width: 300px;
+    height: 790px;
+    background-color: darkblue;
+    position:absolute;
+    top:500px;
+    right:200px;
+    color: white;
+    text-align: center;
+    font-size: xx-large;
+}
+footer {
+    width: 1280px;
+    height: 300px;
+    background-color: orange;
+    position:absolute;
+    bottom:-700px;
+    left:200px;
+    text-align: center;
+    color:white;
+    font-size: xx-large;
+}
