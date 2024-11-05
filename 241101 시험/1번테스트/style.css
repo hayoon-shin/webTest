@@ -1,0 +1,49 @@
+* {
+    box-sizing: border-box;
+}
+label {
+    font-weight: 600;
+}
+fieldset {
+    width: 900px;
+}
+#title, #content {
+    margin-left: 32px;
+    margin-top: 5px;
+}
+#title {
+    width: 289px;
+}
+#uploadFile {
+    border:none;
+    color: black;
+}
+.button_wrap {
+    width: 580px;
+    margin: 0 auto;
+}
+.submit {
+    margin-top: 15px;
+}
+table{
+    border: 1px groove black;
+    width: 900px;
+} 
+.table_title {
+    font-weight: 600;
+    text-align: center;
+    color: white;
+    background-color: #f7a17b;
+}
+.table_footer {
+    font-weight: 600;
+    text-align: center;
+    color: white;
+    background-color: #f7a17b;
+}
+td {
+    border: 1px groove black;
+}
+tbody {
+    background-color: #feffdf;
+}

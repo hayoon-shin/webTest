@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./index.js"></script>
+    <style>
+        body{
+            width: 500px;
+            text-align: right;
+        }
+        input {
+            width: 300px;
+            border: 1px dotted black;
+            margin-top: 20px;
+        }
+        button {
+            margin-top: 40px;
+            width: 400px;
+            height: 50px;
+            border:none;
+            color: #44602a;
+            font-weight: 600;
+            background-color: #c7e0b3;
+        }
+    </style>
+</head>
+<body onload="onLoad();">
+    <form action="#" method="get" id="myform">
+        <label for="id">아이디</label>
+        <input type="text" name="id" id="id"><span></span><br>
+        <label for="pwd">패스워드</label>
+        <input type="password" name="pwd" id="pwd"><span></span><br>
+        <label for="pwd2">패스워드 확인</label>
+        <input type="password" name="pwd2" id="pwd2"><span></span><br>
+        <label for="email">이메일</label>
+        <input type="email" name="email" id="email"><span></span><br>
+        <label for="address">주소</label>
+        <input type="text" name="address" id="address"><span></span><br>
+        <button type="submit">가 입</button>
+    </form>
+</body>
+</html>
